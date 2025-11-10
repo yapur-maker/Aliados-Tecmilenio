@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap');
+
+:root {
+    --color-principal-tecmilenio: #78D64B; /* Pantone 7488 C */
+    --color-master-brand: #00534C;       /* Pantone 330 C */
+    --color-secundario-verdemuyclaro: #C5E86C;  /* Pantone 374 C */
+    --color-secundario-verdeclaro: #97D700;   /* Pantone 375 C */
+    --color-secundario-verdeoscuro: #64A70B;  /* Pantone 369 C */
+    --color-texto-base: #333333;
+    --color-blanco: #FFFFFF;
+
+    --font-titulos: 'Montserrat', sans-serif; /* Placeholder para Magallanes */
+    --font-cuerpo: 'Lato', sans-serif;       /* Placeholder para TheSans */
+    --font-acento: 'Amor Serif Pro', serif; /* Aún sin placeholder */
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-cuerpo);
+    background-color: var(--color-blanco);
+    color: var(--color-texto-base);
+    line-height: 1.6;
+}
+
+/* --- Estilos del Hero Section --- */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh; /* 90% de la altura de la ventana */
+
+    background-image: linear-gradient(rgba(0, 83, 76, 0.8), rgba(0, 83, 76, 0.8)), url('../assets/images/hero-background-tecmirun.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: var(--color-blanco);
+
+    padding: 2rem;
+    box-sizing: border-box; /* Para que el padding no desborde */
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+/* --- Tipografía del Hero --- */
+.hero-content h1 {
+    font-family: var(--font-titulos);
+    font-size: 2.8rem;
+    letter-spacing: 3px; /* Simulación del tracking +50 */
+    margin-bottom: 1rem;
+}
+
+.hero-content .subtitle {
+    font-family: var(--font-cuerpo);
+    font-size: 1.25rem;
+    line-height: 1.7;
+    margin-bottom: 3rem;
+}
+
+/* --- Detalles del Evento --- */
+.event-details {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Para que se adapte en móviles */
+    gap: 1.5rem; /* Espacio entre items */
+    margin-bottom: 3.5rem;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-title {
+    font-family: var(--font-titulos);
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: var(--color-principal-tecmilenio); /* Color principal para acentuar */
+}
+
+.detail-info {
+    font-family: var(--font-cuerpo);
+    font-size: 1.1rem;
+}
+
+/* --- Botón CTA --- */
+.cta-button {
+    font-family: var(--font-titulos);
+    font-weight: 700;
+    text-decoration: none;
+    background-color: var(--color-principal-tecmilenio);
+    color: var(--color-master-brand);
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.05); /* Pequeña animación al pasar el mouse */
+    box-shadow: 0 4px 15px rgba(120, 214, 75, 0.4);
+}
+
+/* --- Estilo base para la sección de paquetes --- */
+#packages-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: var(--color-blanco);
+}
+
+/* --- Estilos Generales de Sección --- */
+.section-title {
+    font-family: var(--font-titulos);
+    font-size: 2.2rem;
+    letter-spacing: 2px; /* Simulación tracking */
+    color: var(--color-master-brand);
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+}
+
+.why-sponsor-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #f9f9f9; /* Un fondo gris muy claro para diferenciarla */
+}
+
+.arguments-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /* Espacio entre tarjetas */
+    flex-wrap: wrap; /* Para que se apilen en pantallas pequeñas */
+    max-width: 1200px;
+    margin: 0 auto; /* Centrar el contenedor */
+}
+
+.argument-card {
+    flex-basis: 300px; /* Base de ancho para cada tarjeta */
+    flex-grow: 1;
+    max-width: 350px;
+    background-color: var(--color-blanco);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    overflow: hidden; /* Para que la imagen no rompa el border-radius */
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.argument-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.argument-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.argument-text {
+    padding: 1.5rem;
+}
+
+.argument-text h3 {
+    font-family: var(--font-titulos);
+    font-size: 1.4rem;
+    color: var(--color-master-brand);
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.argument-text p {
+    font-family: var(--font-cuerpo);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.recorrido-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    /* Usamos el mismo fondo que la sección anterior para alternar colores */
+    background-color: #f9f9f9;
+}
+
+.section-subtitle {
+    font-family: var(--font-cuerpo);
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: var(--color-texto-base);
+    max-width: 700px; /* Evita que el texto sea demasiado ancho */
+    margin: 0 auto 2.5rem auto; /* Centrado y con espacio inferior */
+}
+
+.map-container {
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden; /* Para que la imagen respete el borde redondeado */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.map-container img {
+    width: 100%;
+    height: auto;
+    display: block; /* Elimina espacio extra debajo de la imagen */
+}
+
+/* --- SECCIÓN 5: CONTACTO --- */
+.contact-section {
+    padding: 4rem 2rem;
+    background-color: var(--color-blanco); /* Fondo blanco para esta sección */
+}
+
+.contact-form {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem; /* Espacio entre campos */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%; /* Por defecto, ocupan 100% en móvil */
+}
+
+/* Campos a media anchura en pantallas grandes */
+@media (min-width: 600px) {
+    .form-group {
+        flex-basis: calc(50% - 0.75rem); /* 50% menos la mitad del gap */
+    }
+
+    .form-group.full-width {
+        flex-basis: 100%;
+    }
+}
+
+.form-group label {
+    font-family: var(--font-titulos);
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: var(--color-master-brand);
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea {
+    font-family: var(--font-cuerpo);
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Asegura que el padding no rompa el layout */
+}
+
+.form-group textarea {
+    resize: vertical; /* Permite al usuario redimensionar verticalmente */
+}
+
+.form-group .cta-button {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* --- SECCIÓN 6: FOOTER --- */
+footer {
+    padding: 3rem 2rem;
+    background-color: var(--color-master-brand);
+    color: var(--color-blanco);
+    text-align: center;
+}
+
+footer img {
+    height: 50px; /* Tamaño consistente para el logo */
+    width: auto;
+    margin-bottom: 1rem;
+}
+
+footer .tagline {
+    font-family: var(--font-cuerpo); /* TheSans */
+    font-weight: 700; /* Bold [cite: 786] */
+    font-size: 1.2rem;
+    color: var(--color-blanco);
+    margin: 0;
+}
+
+.package-container {
+    max-width: 700px;
+    margin: 0 auto;
+    border: 2px solid var(--color-principal-tecmilenio);
+    border-radius: 8px;
+    padding: 2.5rem;
+    background-color: #fdfdfd;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+}
+
+.package-subtitle {
+    font-family: var(--font-cuerpo);
+    font-weight: 700;
+    color: var(--color-master-brand);
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin: 0 0 0.5rem 0;
+}
+
+.package-title {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.package-description {
+    font-family: var(--font-cuerpo);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.package-price {
+    margin-bottom: 2rem;
+}
+
+.price-amount {
+    font-family: var(--font-titulos);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-master-brand);
+    margin-right: 0.5rem;
+}
+
+.price-note {
+    font-family: var(--font-cuerpo);
+    font-size: 1rem;
+    color: #777;
+}
+
+.benefits-title {
+    font-family: var(--font-titulos);
+    font-size: 1.2rem;
+    color: var(--color-master-brand);
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.benefits-list {
+    list-style: none; /* Quitamos los puntos negros */
+    padding: 0;
+    margin: 0 0 2.5rem 0;
+    text-align: left;
+}
+
+.benefits-list li {
+    font-family: var(--font-cuerpo);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+}
+
+.benefit-category {
+    font-weight: 700;
+    color: var(--color-master-brand);
+}
+
+#packages-section .cta-button {
+    display: inline-block; /* Hacemos que el botón se ajuste al texto */
+}
